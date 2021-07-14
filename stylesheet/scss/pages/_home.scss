@@ -1,0 +1,243 @@
+.home-content {
+  > section {
+    min-height: 100vh;
+  }
+}
+
+.nav {
+  //   background-color: rgb(241, 241, 241);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: #0000000d 0px 0px 0px 1px;
+  z-index: 100;
+  &-center {
+    padding: 10px 20px;
+
+    @include mq("tablet") {
+      // max-width: 1100px;
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      width: 112px;
+      height: 53px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .toggle_btn {
+      @include mq("tablet") {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-list {
+    height: 0;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    &.active {
+      height: 230px;
+      @include mq("tablet") {
+        height: auto;
+      }
+    }
+
+    @include mq("tablet") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      height: auto;
+    }
+    &-item {
+      padding: 14px 0;
+      &.active {
+        .nav-list-link {
+          color: #fdb934;
+        }
+      }
+      @include mq("tablet") {
+        padding: 0 8px;
+      }
+      @include mq("ipad") {
+        padding: 0 12px;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: capitalize;
+      color: $secondary;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+    @include mq("tablet", "min") {
+      overflow: auto;
+      padding-bottom: 4px;
+    }
+  }
+
+  &-join {
+    display: none;
+
+    @include mq("tablet") {
+      display: block;
+    }
+
+    a {
+      margin-right: 3px;
+    }
+  }
+
+  &-toggle-lang {
+    display: none;
+
+    @include mq("tablet") {
+      display: block;
+    }
+
+    span {
+      display: grid;
+      place-items: center;
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &.eng {
+      span:first-child {
+        display: none;
+      }
+      span:last-child {
+        display: grid;
+      }
+    }
+  }
+
+  @include mq("tablet", "max") {
+    .container{
+      padding: 0;
+      .nav-center{
+        padding: 10px; 
+      }
+    }
+    .nav-list {
+      position: absolute;
+      left: 0;
+      padding: 0 20px;
+      background: #fff;
+      z-index: 55;
+      width: 100%;
+    }
+  }
+}
+///////////////////////////////
+/////////////////////////////
+
+.home-hero {
+  .sec-center {
+    min-height: 100vh;
+    > div {
+      flex: 1;
+    }
+  }
+  .text-box-title{
+    h2{
+      margin: 0 20px;
+      font-size: 35px;
+      font-weight: bolder;
+      color: #000000;
+    }
+  }
+  .text-box-content{
+    h3{
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.86;
+      color: #000000;
+      margin-top: 10px;
+    }
+    .md-text{
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #77787c;
+    }
+  }
+  .text-box-title{
+  @include mq("tablet", "max") {
+    img{
+      display: none;
+    }
+    text-align: center;
+    flex-direction: column;
+    margin: 20px 0; 
+    white-space: nowrap;
+  }
+  }
+}
+
+.about-section-wrapper {
+  .title{
+    h3{
+      font-weight: bold; 
+    }
+  }
+  @include mq("tablet", "max") {
+    margin-bottom: 50px;
+  }
+}
+
+.about-app-content{
+  > div{
+    flex : 1; 
+  }
+  .text-box-title{
+    h3{
+      font-size: 22px;
+      font-weight: bold; 
+      margin: 0 16px;
+      padding: 0;
+    }
+  }
+} 
+
+.contact-us-wrapper{
+  .text-box-title{
+    h3{
+      font-size: 22px;
+      font-weight: bold; 
+      margin: 0 16px; 
+    }
+  }
+  .sec-center{
+    > div{
+      flex : 1;
+    }
+  }
+}
+
+// .about-app-content {
+//   min-height: 100vh;
+//   // display: flex;
+//   justify-content: center;
+// }

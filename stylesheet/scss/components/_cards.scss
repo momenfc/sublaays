@@ -1,0 +1,233 @@
+.sec {
+  // margin: 80px 0 150px;
+  .sec-center {
+    padding: 0 20px;
+
+    @include mq("ipad") {
+      // max-width: 1100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    img {
+      // max-height: 400px;
+      max-width: 100%;
+    }
+  }
+
+  .text-box {
+    @include mq("ipad") {
+      // padding-left: 30px;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        padding: 10px 5px;
+      }
+    }
+
+    &-content {
+      h3 {
+      }
+
+      p {
+        padding: 20px 0;
+      }
+
+      .shop-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        a {
+          margin: 10px;
+          p {
+            font-size: 20px;
+            line-height: 28px;
+            color: #77787c;
+            font-style: italic;
+            padding: 0;
+            &:lang(ar) {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .list {
+        margin-top: 10px;
+        li {
+          list-style-image: url(../../../images/style-icon.svg);
+          list-style-position: outside;
+          margin-left: 35px;
+          padding: 10px 0;
+          line-height: 1.75;
+          font-size: 16px;
+          font-weight: 300;
+          color: #77787c;
+          &::marker {
+            margin-top: 10px;
+          }
+          &:lang(ar) {
+            margin-left: 0;
+            margin-right: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sec-3 {
+  &-center {
+    padding: 0 20px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    .img-box {
+      img {
+        width: 100%;
+      }
+    }
+    h3 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+    @include mq("tablet", "max") {
+      gap: 30px;
+    }
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    @include mq("tablet", "max") {
+      padding: 20px 0;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    }
+    &-img {
+      max-width: 300px;
+      max-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      padding: 30px 0 0;
+      h3 {
+        text-align: center;
+        font-weight: bold;
+        color: #000000;
+      }
+      p {
+        text-align: center;
+        padding: 10px 0;
+        width: 75%;
+        margin: auto;
+        line-height: 1.93;
+        @include mq("tablet", "max") {
+          width: 95%;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.download-app {
+  background-image: url("../../../images/download-app-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-clip: content-box;
+  // padding: 100px 0;
+  padding-bottom: 45px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &:lang(ar) {
+    justify-content: flex-start;
+  }
+  @include mq("ipad", "max") {
+    background-image: linear-gradient(rgba($primary, 0.9)),
+      url("../../../images/download-app-background.png");
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .content {
+    max-width: 500px;
+
+    &:lang(en) {
+      margin-left: auto;
+    }
+  }
+
+  .img-box {
+    width: 80px;
+    img {
+      width: 100%;
+    }
+    padding: 20px 0;
+  }
+
+  .text {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 18px;
+      line-height: normal;
+      color: $secondary;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.61;
+      color: #fbfcff;
+      padding: 20px 0;
+    }
+  }
+
+  .store-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    img {
+      margin: 0 8px;
+    }
+  }
+}
